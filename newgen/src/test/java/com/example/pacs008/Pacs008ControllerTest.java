@@ -2,7 +2,6 @@ package com.example.pacs008;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.example.invoice.Recorder;
 import com.example.pacs008.controller.Pacs008Controller;
 import com.example.pacs008.controller.Response;
 import com.example.pacs008.repository.InMemoryPaymentRepository;

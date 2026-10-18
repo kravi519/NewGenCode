@@ -1,7 +1,6 @@
-package com.example.invoice;
+package com.example.pacs008;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -26,17 +25,6 @@ public final class Recorder {
         }
         System.out.println("RESULT|" + caseId + "|" + output);
         return output;
-    }
-
-    /** Parses "Product:quantity:unitPrice;..." into line items; blank means no items. */
-    static List<LineItem> items(String spec) {
-        if (spec == null || spec.isBlank()) {
-            return List.of();
-        }
-        return Arrays.stream(spec.split(";"))
-                .map(part -> part.strip().split(":"))
-                .map(f -> new LineItem(f[0], Integer.parseInt(f[1]), new BigDecimal(f[2])))
-                .collect(Collectors.toList());
     }
 
     private static String render(Object value) {
